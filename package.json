@@ -1,0 +1,70 @@
+{
+  "name": "mdn-bob",
+  "version": "2.2.1",
+
+  "bin": {
+    "mdn-bob": "./lib/mdn-bob.js"
+  },
+  "engines": {
+    "node": "^16.0.0 || >=18.0.0"
+  },
+  "type": "module",
+  "main": "./lib/mdn-bob.js",
+
+  "scripts": {
+    "build": "node ./lib/mdn-bob.js",
+    "start": "npm-run-all build start-server",
+    "start-server": "http-server -p 4444 ./docs",
+
+    "perf": "bundlesize",
+    "webpack": "webpack"
+  },
+
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+  
+    "bundlesize": "0.18.1",
+    "clipboard": "^2.0.11",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^4.1.0",
+
+    "http-server": "14.1.1",
+  
+    "lint-staged": "^13.0.3",
+    "mini-css-extract-plugin": "^2.6.1",
+    "npm-run-all": "4.1.5",
+    "path-browserify": "^1.0.1",
+
+    "puppeteer": "19.2.2",
+    "style-loader": "^3.3.1",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "@codemirror/autocomplete": "^6.3.0",
+    "@codemirror/commands": "^6.1.1",
+    "@codemirror/lang-css": "^6.0.0",
+    "@codemirror/lang-javascript": "^6.1.0",
+    "@codemirror/lang-wast": "^6.0.0",
+    "@codemirror/language": "^6.2.1",
+    "@codemirror/lint": "^6.0.0",
+    "@codemirror/search": "^6.2.1",
+    "@codemirror/view": "^6.3.0",
+    "@lezer/common": "^1.0.1",
+    "@lezer/css": "^1.0.0",
+    "@lezer/highlight": "^1.1.1",
+    "@lezer/html": "^1.0.1",
+    "@lezer/javascript": "^1.0.2",
+    "clean-css": "5.3.1",
+    "codemirror": "^6.0.1",
+    "cosmiconfig": "7.1.0",
+    "fs-extra": "10.1.0",
+    "glob": "8.0.3",
+    "uglify-es": "3.3.9",
+    "wabt": "^1.0.29",
+    "webpack": "5.75.0"
+  },
+  "resolutions": {
+    "lodash": ">=4.17.5",
+    "underscore.string": ">=3.3.5"
+  }
+}

@@ -1,0 +1,167 @@
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* sizing utility classes */
+.tabbed-shorter .cm-editor {
+  height: 252px;
+}
+
+.tabbed-standard .cm-editor {
+  height: 322px;
+}
+
+.tabbed-taller .cm-editor {
+  height: 532px;
+}
+
+.tabbed-taller .cm-editor,
+.tabbed-standard .cm-editor,
+.tabbed-shorter .cm-editor {
+  border-right: 0 none;
+  border-left: 0 none;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.output-container {
+  position: relative;
+}
+
+.tabs {
+  font-size: 0.9rem;
+  flex: none;
+}
+
+.output-label,
+.console-label {
+  position: absolute;
+  background-color: var(--background-secondary);
+  color: var(--text-secondary);
+  border-radius: 0 0 0 var(--elem-radius);
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0.5rem 1.6rem;
+  font-size: 0.9rem;
+  z-index: 2;
+  font: var(--type-label-s);
+  text-transform: uppercase;
+}
+
+.icon-clear {
+  width: 12px;
+  height: 12px;
+}
+
+.clear {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  background-color: var(--button-secondary-default);
+  color: var(--text-primary);
+  padding: 0.5em;
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--border-primary);
+  border-radius: var(--elem-radius);
+  font: var(--type-emphasis-m);
+  cursor: pointer;
+}
+
+.clear:hover {
+  background-color: var(--button-secondary-hover);
+}
+
+.console-container {
+  position: relative;
+  border-top: 1px solid var(--border-primary);
+  padding-top: 0.5rem;
+}
+
+.console-label {
+  position: absolute;
+  top: 3rem;
+  right: 1px;
+  border-radius: var(--elem-radius);
+}
+
+.console {
+  position: relative;
+  height: 200px;
+  background-color: var(--background-secondary);
+  margin: 0;
+  padding: 2rem 0.5rem 0.5rem 0.5rem;
+  border: 1px solid var(--border-primary);
+  border-radius: var(--elem-radius);
+  width: 100%;
+  height: 200px;
+  font: var(--type-code-regular);
+}
+
+.console code {
+  display: block;
+  width: 100%;
+  height: 100px;
+  white-space: pre;
+  word-break: break-word;
+  overflow-y: auto;
+}
+
+@media screen and (min-width: 590px) {
+  .editor-container {
+    flex-direction: row;
+  }
+
+  .console {
+    padding-top: 0.5rem;
+  }
+
+  .tabs {
+    width: 60%;
+  }
+
+  .tabbed-shorter {
+    height: 300px;
+  }
+
+  .tabbed-standard {
+    height: 370px;
+  }
+  .tabbed-taller {
+    height: 580px;
+  }
+
+  .output-container {
+    width: 40%;
+    height: 100%;
+    border-left: 1px solid var(--border-primary);
+  }
+
+  .tabbed-taller .cm-editor,
+  .tabbed-standard .cm-editor,
+  .tabbed-shorter .cm-editor {
+    border-bottom: 0 none;
+  }
+}
+
+#output-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Those rules apply to content inside iframe, where example is shown */
+#output-root body {
+  background-color: #fff;
+}
+
+#html-output {
+  color: #15141aff;
+  font-size: 0.9rem;
+  overflow: auto;
+  line-height: 1.5;
+  padding: 2rem 1rem 1rem;
+  height: min-content; /* This value ensures correct calculation of clientHeight in /pages/tabbed/img */
+  width: fit-content; /* This value moves horizontal scroll bar to the bottom of iframe */
+}
