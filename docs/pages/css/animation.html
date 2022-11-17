@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>CSS Demo: animation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../../css/codemirror.css?v=9f6d74f" rel="stylesheet" />
+    <link rel="stylesheet" href="../../css/editor-css.css?v=9f6d74f" />
+    <link rel="stylesheet" href="../../live-examples/css-examples/animation/animation.css" />
+  </head>
+
+  <body>
+    <section class="css-editor-container">
+      <header class="output-header">
+        <h4 class="output-heading">CSS Demo: animation</h4>
+        <button id="reset" class="reset" type="button">Reset</button>
+      </header>
+      <noscript>
+        <div id="warning-no-script" class="warning">
+          Interactive examples cannot be shown because JavaScript is disabled.
+        </div>
+      </noscript>
+      <div id="warning-no-support" class="warning hidden">
+        This feature is not supported by your current browser. Check Browser
+        compatibility for more details.
+      </div>
+      <div id="editor-wrapper" class="editor-wrapper hidden">
+        <section
+  id="example-choice-list"
+  class="example-choice-list"
+  data-property="animation"
+>
+  <div class="example-choice">
+    <pre><code class="language-css">animation: slidein 3s ease-in 1s infinite reverse both running;</code></pre>
+    <button type="button" class="copy hidden" aria-hidden="true">
+      <span class="visually-hidden">Copy to Clipboard</span>
+    </button>
+  </div>
+
+  <div class="example-choice">
+    <pre><code class="language-css">animation: slidein 3s linear 1s infinite running;</code></pre>
+    <button type="button" class="copy hidden" aria-hidden="true">
+      <span class="visually-hidden">Copy to Clipboard</span>
+    </button>
+  </div>
+
+  <div class="example-choice">
+    <pre><code class="language-css">animation: slidein 3s linear 1s infinite alternate;</code></pre>
+    <button type="button" class="copy hidden" aria-hidden="true">
+      <span class="visually-hidden">Copy to Clipboard</span>
+    </button>
+  </div>
+
+  <div class="example-choice">
+    <pre><code class="language-css">animation: slidein .5s linear 1s infinite alternate;</code></pre>
+    <button type="button" class="copy hidden" aria-hidden="true">
+      <span class="visually-hidden">Copy to Clipboard</span>
+    </button>
+  </div>
+</section>
+
+<div id="output" class="output hidden">
+  <section id="default-example" class="flex-column">
+    <div id="example-element"></div>
+  </section>
+</div>
+
+      </div>
+    </section>
+    <div id="user-message" class="user-message" aria-hidden="true">Copied!</div>
+    <script src="../../js/codemirror.js?v=9f6d74f"></script>
+    <script src="../../js/editor-css.js?v=9f6d74f"></script>
+    
+  </body>
+</html>
